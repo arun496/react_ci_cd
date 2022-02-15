@@ -39,10 +39,11 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         # Also have to pass these credentials to authenticate and safely deploy
         # We have passed these parameters using Github Secrets so that we don't expose it all over
+        # So go to setting tab, secrets tab and add secrets in your repository
         with:
           # Can find API key in User's Dashbpard
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_api_key: ${{ secrets.MY_HEROKU_API_KEY }}
           # Now select "unique" App name to deploy over Heroku smoothly
-          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_app_name: ${{ secrets.MY_HEROKU_APP_NAME }}
           # Pass your Heroku registered email
-          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          heroku_email: ${{ secrets.MY_HEROKU_EMAIL }}
