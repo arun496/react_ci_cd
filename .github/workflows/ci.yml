@@ -88,10 +88,8 @@ jobs:
     runs-on: self-hosted
     # needs: build_and_push
     steps:
-      # - name: List all directories
-      #   run: |
-      #     cd /
-      #     ls
+      - name: Some Permissions
+        run: sudo chmod 666 /var/run/docker.sock
 
       # - name: Deploy to a Droplet
       #   uses: appleboy/ssh-action@master
