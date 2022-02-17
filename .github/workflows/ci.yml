@@ -50,3 +50,50 @@ jobs:
           heroku_app_name: ${{ secrets.MY_HEROKU_APP_NAME }}
           # Pass your Heroku registered email
           heroku_email: ${{ secrets.MY_HEROKU_EMAIL }}
+
+
+
+
+
+# name: CI of Container
+
+# on:
+#   push:
+#     branches: [ "main" ]
+
+# jobs:
+#   build_and_push:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Login to Docker hub
+#         uses: docker/login-action@v1
+#         with:
+#           username: ${{ secrets.DOCKERHUB_USERNAME }}
+#           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+#       - name: Build container image
+#         # run: docker build -t arun496/react-frontend -f /home/runner/work/fullstack_container_ci_cd/fullstack_container_ci_cd/frontend/Dockerfile.dev .
+#         run: |
+#             ls
+#             pwd
+#             cd /home/runner/work/react_docker_ci_cd/react_docker_ci_cd/
+#             docker build -t arun496/react-frontend -f Dockerfile .
+#       - name: Push image to Docker Hub
+#         run: docker push arun496/react-frontend
+  
+#   deploy:
+#     runs-on: self-hosted
+#     needs: build_and_push
+#     steps:
+#       - name: Test self-hosted
+#         run: echo ${{ secrets.hello }} > /hello.txt
+#     steps:
+#       - name: Deploy to a Droplet
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.HOST }}
+#           username: ${{ secrets.USERNAME }}
+#           password: ${{ secrets.PASSWORD }}
