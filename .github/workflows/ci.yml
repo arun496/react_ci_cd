@@ -106,3 +106,4 @@ jobs:
       
       - name: Run React App container of pulled Docker image
         run: docker run -p 3000:3000 arun496/react-frontend
+        
