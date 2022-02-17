@@ -88,6 +88,10 @@ jobs:
     runs-on: self-hosted
     # needs: build_and_push
     steps:
+      - name: List all directories
+        run: |
+          cd /
+          ls
       # - name: Deploy to a Droplet
       #   uses: appleboy/ssh-action@master
       #   with:
@@ -95,14 +99,14 @@ jobs:
       #     username: ${{ secrets.MY_DIGITALOCEAN_USERNAME }}
       #     password: ${{ secrets.MY_DIGITALOCEAN_PASSWORD }}
 
-      - name: Login to Docker hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.MY_DOCKERHUB_USERNAME }}
-          password: ${{ secrets.MY_DOCKERHUB_TOKEN }}
+      # - name: Login to Docker hub
+      #   uses: docker/login-action@v1
+      #   with:
+      #     username: ${{ secrets.MY_DOCKERHUB_USERNAME }}
+      #     password: ${{ secrets.MY_DOCKERHUB_TOKEN }}
       
-      - name: Pull Docker image
-        run: docker pull arun496/react-frontend
+      # - name: Pull Docker image
+      #   run: docker pull arun496/react-frontend
       
-      - name: Run React App container of pulled Docker image
-        run: docker run -p 3000:3000 arun496/react-frontend
+      # - name: Run React App container of pulled Docker image
+      #   run: docker run -p 3000:3000 arun496/react-frontend
