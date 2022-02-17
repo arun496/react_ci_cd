@@ -87,7 +87,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     # needs: build_and_push
-    # steps:
+    steps:
       - name: List all directories
         run: |
           cd /
