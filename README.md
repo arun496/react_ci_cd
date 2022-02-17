@@ -69,3 +69,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+
+
+## Commands
+#### ssh root@<your-ip>
+#### eg: ssh root@139.59.4.23
+
+#### sudo adduser arunpep
+#### sudo usermod -aG sudo arunpep
+#### mkdir actions-runner && cd actions-runner
+#### curl -o actions-runner-linux-x64-2.163.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.163.1/actions-runner-linux-x64-2.163.1.tar.gz
+#### tar xzf ./actions-runner-linux-x64-2.163.1.tar.gz
+#### ./config.sh --url https://github.com/arun496/react_ci_cd --token <your-token>
+#### ./run.sh
