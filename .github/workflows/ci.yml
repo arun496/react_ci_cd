@@ -78,7 +78,7 @@ jobs:
         run: |
             ls
             pwd
-            cd /home/runner/work/react_docker_ci_cd/react_docker_ci_cd/
+            cd /home/runner/work/react_ci_cd/react_ci_cd/
             docker build -t arun496/react-frontend -f Dockerfile .
 
       - name: Push image to Docker Hub
